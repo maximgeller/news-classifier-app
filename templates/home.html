@@ -9,6 +9,9 @@
     <body>
         <h1>News Classifier App</h1>
         <label for="article">Article:</label><br>
-        <input type="text" name="article" placeholder="Paste article here">
+        <form method="POST" action="{{ url_for('predict')}}">
+        <textarea name="article" placeholder="Paste article here"></textarea>
+        <input type="submit" class="btn-info" value="predict">
+        <form>
     </body>
 </html>
