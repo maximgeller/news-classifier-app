@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset='UTF-8'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Template</title>
+        <link rel="stylesheet" href="{{ url_for('static',  filename='css/main.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1 id="header">News Classification App</h1>
+                <ul class="nav">
+                    <li><a id="home" href="{{ url_for('home') }}">Home</a></li>
+                    <li id="pipe">||</li>
+                    <li><a id="about" href="{{ url_for('about') }}">About</a></li>
+                </ul>
+            </div>
+        </header>
+
+        {% block content %}
+        {% endblock %}
+
+    </body>
+</html>

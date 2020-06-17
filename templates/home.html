@@ -7,11 +7,16 @@
     </head>
 
     <body>
-        <h1>News Classifier App</h1>
-        <label for="article">Article:</label><br>
+        {% extends "template.html" %}
+        {% block content %}
+        <br><br>
+        <div id="title">
+            <label for="article">Article</label><br>
+        </div>
         <form method="POST" action="{{ url_for('predict')}}">
-        <textarea name="article" placeholder="Paste article here"></textarea>
-        <input type="submit" class="btn-info" value="predict">
-        <form>
+        <textarea id="input" name="article" placeholder="Paste article here"></textarea> <br>
+        <input id="submit_button" type="submit" class="btn" value="Predict"> 
+        </form>
+        {% endblock %}
     </body>
 </html>
