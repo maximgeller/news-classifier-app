@@ -9,7 +9,24 @@
     <body>
         {% extends "template.html" %}
         {% block content %}
-    
+        <ul id="about-list">
+            <li>
+                <h3>What is this thing?!</h3>
+                <p>Scary machine learning 😲...just kidding. This is an application that takes in any news article you want and classifies
+                it as real or not. Keep in mind though, it really is just a <b>guess</b>. The model vectorizes all of the words it's presented and 
+                computes the probability that the news article is true using something called a 
+                <a href="https://en.wikipedia.org/wiki/Naive_Bayes_classifier">Naive Bayes classifier</a>!
+                </p><br>
+            </li>
+            <li>
+                <h3>Why did we make this?</h3>
+                <p>This website was built as a project to learn about deploying machine learning models and web development.
+                <br />The inspiration came from two projects on <a href="https://enlight.nyc">Enlight</a>, the educational platform where
+                anyone can learn to code by building real projects. This is an extension of two projects from the website, the 
+                <a href="https://enlight.nyc/projects/build-a-naive-bayes-classifier">Naive Bayes classifier</a> and 
+                <a href="https://enlight.nyc/projects/build-a-flask-web-app">Flask web app</a>.</p><br>
+            </li>
+        </ul>
         {% endblock %}
     </body>
 </html>

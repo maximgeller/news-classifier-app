@@ -2,14 +2,19 @@
     <head>
         <meta charset='UTF-8'/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>News Classifier App</title>
+        <title>News Classification App</title>
         <link rel="stylesheet" href="{{ url_for('static',  filename='css/main.css') }}">
     </head>
 
     <body>
         {% extends "template.html" %}
         {% block content %}
-        <br><br>
+        <br>
+        <div id="instructions">
+            <p><b>Instructions:</b> Copy and paste the text of any news story you find online and we will try to detect whether or not 
+            it could be fake!</p>
+        </div>
+        <br>
         <div id="title">
             <label for="article">Article</label><br>
         </div>

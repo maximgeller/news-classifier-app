@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset='UTF-8'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prediction</title>
+        <link rel="stylesheet" href="{{ url_for('static',  filename='css/main.css') }}">
+    </head>
+
+    <body>
+        {% extends "template.html" %}
+        {% block content %}
+        
+        {% if result %}
+        fake news story stuff
+
+        {% else %}
+        real stuff
+        {% endif %}
+
+        <h3>Here are some helpful resources about finding factual news stories</h3>
+        <br />
+        <div class="resources">
+            <a id="card-link" href="https://www.americanpressinstitute.org/publications/six-critical-questions-can-use-evaluate-media-content/">
+                <div class="card">
+                    <img src="{{ url_for('static',  filename='6-questions.png') }}" alt="Resource 1">
+                    <div class="container">
+                        <p>6 Critical Questions</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a id="card-link" href="https://www.politifact.com/">
+                <div class="card" href="https://www.politifact.com/">
+                    <img src="{{ url_for('static',  filename='politifact-crop.png') }}" alt="Resource 2">
+                    <div class="container">
+                        <p>PolitiFact</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endblock %}
+    </body>
+</html>
