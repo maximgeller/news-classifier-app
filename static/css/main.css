@@ -6,6 +6,7 @@ html {
 body {
     text-align: center;
     padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .nav li {
@@ -107,7 +108,7 @@ a:hover {
 #card-link {
     text-decoration: none;
     color: #a055e6;
-
+    padding: 0px;
 }
 #card-link:hover {
     opacity: 0.7;
@@ -144,4 +145,13 @@ img {
 
 span {
     background-color: #a1c0e1;
+}
+
+blockquote {
+    border-left: 3px solid black;
+    padding-left: 10px;
+}
+
+footer {
+    margin-top: 50px;
 }

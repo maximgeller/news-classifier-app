@@ -4,6 +4,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Prediction</title>
         <link rel="stylesheet" href="{{ url_for('static',  filename='css/main.css') }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static',  filename='apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static',  filename='favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static',  filename='favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ url_for('static',  filename='site.webmanifest') }}">
+        <base target="_blank">
     </head>
 
     <body>
@@ -11,13 +16,15 @@
         {% block content %}
         
         {% if fake %}
+        <br>
         <h2>Our model detected that the contents of this article is most likely <span>fake news</span>.</h2>
         {% else %}
+        <br>
         <h2>Our model detected that the contents of this article most likely contain <span>real news</span>.</h2>
         {% endif %}
 
-        <p>For more information about how this model came to this conclusion, please refer to the <a href="{{ url_for('about') }}">disclaimer</a> here.</p>
-        <a href="{{ url_for('home') }}">Click here to try another article.</a>
+        <p>For more information about how this model came to this conclusion, please refer to the <a target="_self" href="{{ url_for('about') }}">disclaimer</a> here.
+        <a target="_self" href="{{ url_for('home') }}">Click here to try another article.</a> </p>
         <br /><br /><br />
         <h4>Here are some helpful resources about finding factual news stories</h4>
         

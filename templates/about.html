@@ -4,6 +4,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About</title>
         <link rel="stylesheet" href="{{ url_for('static',  filename='css/main.css') }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static',  filename='apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static',  filename='favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static',  filename='favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ url_for('static',  filename='site.webmanifest') }}">
+        <base target="_blank">
     </head>
 
     <body>
@@ -13,14 +18,21 @@
             <li>
                 <h3>What is this thing?!</h3>
                 <p>Scary machine learning 😲...just kidding. This is an application that takes in any news article you want and classifies
-                it as real or not. Keep in mind though, it really is just a <b>guess</b>. The model vectorizes all of the words it's presented and 
+                it as real or not. Keep in mind though, this model should <b>never</b> get the final say. The model vectorizes all of the words it's presented and 
                 computes the probability that the news article is true using something called a 
                 <a href="https://en.wikipedia.org/wiki/Naive_Bayes_classifier">Naive Bayes classifier</a>!
                 </p><br>
             </li>
             <li>
                 <h3>What is "fake news"?</h3>
-                <p>
+                <p><blockquote><em>"...fabricated information that mimics news media content in form but not in organizational process or intent.
+                  Fake-news outlets, in turn, lack the news media's editorial norms and processes for ensuring the accuracy and credibility of
+                  information. Fake news overlaps with other information disorders, such as misinformation (false or misleading information) 
+                  and disinformation (false information that is purposely spread to deceive people)."</em><br><br>
+                  <a id="author" href="{{ url_for('static',  filename='the-science-of-fake-news.pdf') }}">- David M. J. Lazer, "The Science of Fake News" </a>
+                  </blockquote>
+                  To sum that up, fake news are stories which are meant to <b>disinform</b> the reader. One of the motivations behind this project
+                  was to see if we could find a way to identify patterns in news stories that suggest the probability that they're untrue.
                 </p><br>
             </li>
             <li>
@@ -30,6 +42,15 @@
                 anyone can learn to code by building real projects. This is an extension of two projects from the website, the 
                 <a href="https://enlight.nyc/projects/build-a-naive-bayes-classifier">Naive Bayes classifier</a> and 
                 <a href="https://enlight.nyc/projects/build-a-flask-web-app">Flask web app</a>.</p><br>
+            </li>
+            <li>
+                <h3>Want to see the code?</h3>
+                <p>Here's a <a href="https://github.com/maximgeller/projects/tree/master/fake_news_naive_bayes">link</a> 
+                to the notebook where the model is trained! Also, the training data came from this 
+                <a href="https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset/">dataset</a> on Kaggle.
+                <br>Finally, the source code to this full web application can be found 
+                <a href="https://github.com/maximgeller/news-classifier-app">here</a>.
+                </p>
             </li>
         </ul>
         {% endblock %}
