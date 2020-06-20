@@ -61,12 +61,7 @@ body {
 }
 #home, #about, #pipe {
     text-transform: none;
-    color: black;
     font-size: 20px;
-}
-
-#home:hover, #about:hover {
-    opacity: 0.5;
 }
 
 #title {
@@ -101,11 +96,21 @@ li {
 
 a {
     color: #a055e6;
+    text-decoration: none;
 }
 
 a:hover {
     opacity: 0.5;
     color: #eb2643;
+}
+
+#card-link {
+    text-decoration: none;
+    color: #a055e6;
+
+}
+#card-link:hover {
+    opacity: 0.7;
 }
 
 #instructions {
@@ -115,13 +120,16 @@ a:hover {
 
 .card {
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
-    margin: 0 30px;
+    margin: 25px 30px;
     padding: 7px 7px 7px 7px;
     border-radius: 10px;
+    background-color: #dddddd;
 }
 
 .resources {
     display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 img {
@@ -134,6 +142,6 @@ img {
     box-shadow: 0 10px 15px 0 rgba(0,0,0,0.2);
 }
 
-#card-link {
-    text-decoration: none;
+span {
+    background-color: #a1c0e1;
 }

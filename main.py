@@ -33,7 +33,7 @@ def predict():
         data = [text] # we need to enclose it in a vector for the model
         vect = cv.transform(data) # vectorize the article
         prediction = model.predict(vect) # predict!
-        return render_template("predict.html", result = prediction[0]) # 1: fake; 0: real
+        return render_template("predict.html", fake = prediction[0]) # 1: fake; 0: real
        #  return "Fake News Story" if prediction[0] else "Real News Story" # 1: fake; 0: real
 
 if __name__ == "__main__":
